@@ -1,0 +1,216 @@
+let budget = 0;
+let totalExpense = 0;
+
+function setBudget() {
+    budget = Number(document.getElementById("budget").value);
+
+    if (budget <= 0) {
+        alert("Please enter a valid budget!");
+        return;
+    }
+
+    updateBalance();
+}
+
+function addExpense() {
+    const name = document.getElementById("expenseName").value;
+    const amount = Number(document.getElementById("expenseAmount").value);
+    const category = document.getElementById("category").value;
+
+    if (name === "" || amount <= 0) {
+        alert("Please enter valid expense details!");
+        return;
+    }
+
+    totalExpense += amount;
+
+    const list = document.getElementById("expenseList");
+
+    const item = document.createElement("li");
+    item.innerHTML = `
+        <strong>${name}</strong> - ₹${amount}
+        <span> (${category})</span>
+    `;
+
+    list.appendChild(item);
+
+    updateBalance();
+
+    document.getElementById("expenseName").value = "";
+    document.getElementById("expenseAmount").value = "";
+}
+
+function updateBalance() {
+    const remaining = budget - totalExpense;
+
+    document.getElementById("remaining").innerText =
+        "₹" + remaining;
+
+    const recommendation =
+        document.getElementById("recommendationText");
+
+    if (budget === 0) {
+        recommendation.innerText =
+            "Set your budget to receive recommendations.";
+    }
+    else if (remaining < 0) {
+        recommendation.innerText =
+            "⚠️ You have exceeded your budget. Try reducing unnecessary expenses.";
+    }
+    else if (totalExpense > budget * 0.8) {
+        recommendation.innerText =
+            "⚠️ You have used more than 80% of your budget. Spend carefully!";
+    }
+    else if (totalExpense > budget * 0.5) {
+        recommendation.innerText =
+            "💡 You are halfway through your budget. Keep monitoring your spending.";
+    }
+    else {
+        recommendation.innerText =
+            "✅ Great job! Your spending is under control.";
+    }
+}
+let budget = 0;
+let totalExpense = 0;
+
+function setBudget() {
+    budget = Number(document.getElementById("budget").value);
+
+    if (budget <= 0) {
+        alert("Please enter a valid budget!");
+        return;
+    }
+
+    updateBalance();
+}
+
+function addExpense() {
+    const name = document.getElementById("expenseName").value;
+    const amount = Number(document.getElementById("expenseAmount").value);
+    const category = document.getElementById("category").value;
+
+    if (name === "" || amount <= 0) {
+        alert("Please enter valid expense details!");
+        return;
+    }
+
+    totalExpense += amount;
+
+    const list = document.getElementById("expenseList");
+
+    const item = document.createElement("li");
+    item.innerHTML = `
+        <strong>${name}</strong> - ₹${amount}
+        <span> (${category})</span>
+    `;
+
+    list.appendChild(item);
+
+    updateBalance();
+
+    document.getElementById("expenseName").value = "";
+    document.getElementById("expenseAmount").value = "";
+}
+
+function updateBalance() {
+    const remaining = budget - totalExpense;
+
+    document.getElementById("remaining").innerText =
+        "₹" + remaining;
+
+    const recommendation =
+        document.getElementById("recommendationText");
+
+    if (budget === 0) {
+        recommendation.innerText =
+            "Set your budget to receive recommendations.";
+    }
+    else if (remaining < 0) {
+        recommendation.innerText =
+            "⚠️ You have exceeded your budget. Try reducing unnecessary expenses.";
+    }
+    else if (totalExpense > budget * 0.8) {
+        recommendation.innerText =
+            "⚠️ You have used more than 80% of your budget. Spend carefully!";
+    }
+    else if (totalExpense > budget * 0.5) {
+        recommendation.innerText =
+            "💡 You are halfway through your budget. Keep monitoring your spending.";
+    }
+    else {
+        recommendation.innerText =
+            "✅ Great job! Your spending is under control.";
+    }
+}
+let budget = 0;
+let totalExpense = 0;
+
+function setBudget() {
+    budget = Number(document.getElementById("budget").value);
+
+    if (budget <= 0) {
+        alert("Please enter a valid budget!");
+        return;
+    }
+
+    updateBalance();
+}
+
+function addExpense() {
+    const name = document.getElementById("expenseName").value;
+    const amount = Number(document.getElementById("expenseAmount").value);
+    const category = document.getElementById("category").value;
+
+    if (name === "" || amount <= 0) {
+        alert("Please enter valid expense details!");
+        return;
+    }
+
+    totalExpense += amount;
+
+    const list = document.getElementById("expenseList");
+
+    const item = document.createElement("li");
+    item.innerHTML = `
+        <strong>${name}</strong> - ₹${amount}
+        <span> (${category})</span>
+    `;
+
+    list.appendChild(item);
+
+    updateBalance();
+
+    document.getElementById("expenseName").value = "";
+    document.getElementById("expenseAmount").value = "";
+}
+
+function updateBalance() {
+    const remaining = budget - totalExpense;
+
+    document.getElementById("remaining").innerText =
+        "₹" + remaining;
+
+    const recommendation =
+        document.getElementById("recommendationText");
+
+    if (budget === 0) {
+        recommendation.innerText =
+            "Set your budget to receive recommendations.";
+    }
+    else if (remaining < 0) {
+        recommendation.innerText =
+            "⚠️ You have exceeded your budget. Try reducing unnecessary expenses.";
+    }
+    else if (totalExpense > budget * 0.8) {
+        recommendation.innerText =
+            "⚠️ You have used more than 80% of your budget. Spend carefully!";
+    }
+    else if (totalExpense > budget * 0.5) {
+        recommendation.innerText =
+            "💡 You are halfway through your budget. Keep monitoring your spending.";
+    }
+    else {
+        recommendation.innerText =
+            "✅ Great job! Your spending is under control.";
+    }
+}
